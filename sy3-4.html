@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table</title>
+  <style>
+    table{
+      width: 800px;
+      margin: 0 auto;
+      border: 1px solid #000000;
+      border-collapse: collapse;
+    }
+    th,td{
+      text-align: center;
+      border: 1px solid #000000;
+      font-size: 14px;
+      line-height: 30px;
+    }
+    th{
+      background: #328aa4;
+      color: #ffffff;
+
+    }
+    tr:nth-child(n) td{
+      background: #fdfbcc;
+    }
+    tr:nth-child(2n) td{
+      background: #e5f1f4;
+    }
+  </style>
+</head>
+<body>
+  <table>
+   <tr>
+    <th>活动编号</th>
+    <th>活动名称</th>
+    <th>会员价</th>
+    <th>参加人数</th>
+   </tr>
+   <tr>
+    <td>001</td>
+    <td>田园风光</td>
+    <td>3800</td>
+    <td>800</td>
+   </tr>
+   <tr>
+    <td>002</td>
+    <td>海天一色</td>
+    <td>3600</td>
+    <td>700</td>
+   </tr>
+   <tr>
+    <td>003</td>
+    <td>北欧风情</td>
+    <td>3300</td>
+    <td>600</td>
+   </tr>
+   <tr>
+    <td>004</td>
+    <td>南极风采</td>
+    <td>3100</td>
+    <td>500</td>
+   </tr>
+  </table>
+</body>
+</html>
