@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>实验2-4</title>
+</head>
+
+<body>
+	<form name="用户注册" action="URL" method="POST">
+        <h2 align="center">用户注册</h2>
+        <table width="500" border="1" bordercolor="blue" align="center" cellpadding="3" cellspacing="2" bgcolor="#66ccff">
+            <tr>
+				<td width="100" height="20" align="right">姓名</td>
+                <td width="500" height="20" align="left">
+                <input type="text" name="username" id="username"></td>
+            </tr>
+			<tr>
+				<td width="100" height="20" align="right">曾用名（看不到，暗地传输数据）</td>
+                <td width="500" height="20" align="left">
+                <input type="text" name="username" id="useredname"></td>
+            </tr>
+            <tr>
+				<td width="100" height="20" align="right">密码</td>
+                <td width="500" height="20" align="left">
+                <input type="password" name="pass" id="pass" size="18" maxlength="18"></td>
+            </tr>
+			<tr>
+				<td width="100" height="20" align="right">确认密码</td>
+                <td width="500" height="20" align="left">
+                <input type="password" name="passed" id="passed" size="18" maxlength="18"></td>
+			</tr>
+            <tr>
+                <td width="100" height="20" align="right">性别</td>
+                <td width="500" height="20" align="left">
+                <input type="radio" name="sex" value="男" checked/>男
+                <input type="radio" name="sex" value="女"/>女</td>
+            </tr>
+            <tr>
+                <td width="100" height="20" align="right">爱好</td>
+                <td width="500" height="20" align="left">
+                <input type="checkbox" name="like" value="上网"/>上网
+                <input type="checkbox" name="like" value="篮球" checked/>篮球
+                <input type="checkbox" name="like" value="听歌"/>听歌
+				<input type="checkbox" name="like" value="下棋"/>下棋</td>
+            </tr>
+            <tr>
+                <td width="100" height="20" align="right">展示文件</td>
+                <td width="500" height="20" align="left">
+                <input type="file" name="files"  value="选择文件"></td>
+            </tr>
+            <tr>
+                <td width="100" height="20" align="right"><label for="mybutton" id="my_bt"></label>按钮</td>
+                <td width="500" height="20" align="left">
+                <input type="button" onClick="change_Color()" name="mybutton" value="按钮"/>
+				<p><input type="reset" onClick="alert('Hello!')" value="click me!"/></p>
+				<script type="text/javascript">
+					function change_Color(){
+						let black_bt=document.getlementById("my_bt");
+						black_bt.style.color="red";}
+					</script>
+				</td>
+            </tr>
+            <tr>
+                <td width="100" height="20" align="right">喜欢的颜色</td>
+                <td width="500" height="20" align="left">
+                <input type="color"/></td>
+            </tr>
+			<tr>
+                <td width="100" height="20" align="right">喜欢的数字（0-9）</td>
+                <td width="500" height="20" align="left">
+                <input type="text" name="number" id="number" size="10" maxlength="1"/></td>
+            </tr>
+			<tr>
+                <td width="100" height="20" align="right">身高</td>
+                <td width="500" height="20" align="left">
+                <input type="range" id="slider" name="slider" min="0" max="300" step="1" value="50">
+				<p id="demo"></p>
+					<script>
+						var slider=document.getElementById("skider");
+						var output=document.getElementById("demo");
+						ouput.innerHTML=slider.value;
+						slider.oninput=function(){
+							output.innerHTML=this.value;
+						}
+					</script>
+				</td>
+            </tr>
+			 <tr>
+                <td width="100" height="20" align="right">联系电话(tel)</td>
+                <td width="500" height="20" align="left">
+                <input type="text" name="phone" id="phone" size="11" maxlength="11"></td>
+            </tr>
+			<tr>
+                <td width="100" height="20" align="right">电子邮件（email）</td>
+                <td width="500" height="20" align="left">
+                <input type="text" name="email" id="email" size="30" maxlength="30"></td>
+            </tr>
+			<tr>
+                <td width="100" height="20" align="right">你最喜欢的网站（url）</td>
+                <td width="500" height="20" align="left">
+                <input type="url" id="urlinput" name="urlinput"
+					   placeholder="例：https://Lemdei.github.io" maxlength="80"></td>
+            </tr>
+			<tr>
+                <td width="100" height="20" align="right">你的搜索（search）</td>
+                <td width="500" height="20" align="left">
+                <input type="search" placeholder=""  maxlength="30"></td>
+            </tr>
+			<tr>
+                <td width="100" height="20" align="right">出生日期</td>
+                <td width="500" height="20" align="left">
+                <input type="text" name="date" id="date" size="20" value="  年/  月/  日"></td>
+            </tr>
+			<tr>
+                <td width="100" height="20" align="right">出生日期_时间</td>
+                <td width="500" height="20" align="left">
+                <input type="datatime" name="dated" id="dated" size="20" ></td>
+            </tr>
+			<tr>
+                <td width="100" height="20" align="right">出生日期_时间（datetime-local）</td>
+                <td width="500" height="20" align="left">
+                <input type="datetime-local" name="time" id="time" size="20" value="  年/  月/  日 --:--"></td>
+            </tr>
+			<tr>
+                <td width="100" height="20" align="right">出生年月（month）</td>
+                <td width="500" height="20" align="left">
+                <input type="month" name="time" id="month" size="20" value="---年--月"></td>
+            </tr>
+			<tr>
+                <td width="100" height="20" align="right">出生周（week）</td>
+                <td width="500" height="20" align="left">
+                <input type="week" name="time" id="week" size="20" value="---年第--周"></td>
+            </tr>
+			<tr>
+                <td width="100" height="20" align="right">出生时刻（time）</td>
+                <td width="500" height="20" align="left">
+                <input type="time" name="time" id="timed" size="20" value="  --:--"></td>
+            </tr>
+			<tr>
+				<td width="100" height="20" align="right">最高学历</td>
+				<td width="500" height="20" align="left">
+					<input type="text" placeholder="小学/初中/高中/大学/研究生及以上" maxlength="10"></td>
+			</tr>
+			<tr>
+				<td width="100" height="20" align="right">职业</td>
+				<td width="500" height="20" align="left">
+				 <selet name="work">
+					 <option value="学生">学生</option>
+					 <option value="教师" selected>教师</option>
+					 <option value="医生">医生</option>
+					</selet>
+				</td>
+			</tr>
+            <tr>
+                <td width="100" height="20" align="right">留言</td>
+                <td width="500" height="20" align="left">
+                <textarea name="about" id="text" cols="30" rows="10">请您留言！</textarea></td>
+            </tr>
+            <tr>
+                <td height="10" colspan="2">
+					 <input type="submit" name="Submit" value="提交/">
+					 <input type="reset" name="Submit2" value="提交"/>
+               </td>
+            </tr>
+    </table>
+    </form>
+</body>
+</html>
+
+
+          
