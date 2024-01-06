@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>灯</title>
+  <script>
+    function turnOnLight() {
+      // 获取图片标签
+      var lightBulb = document.getElementById('lightBulb');
+
+      // 设置图片标签的 src 属性为黄色图片的路径
+      lightBulb.src = './images/open.jpg';
+    }
+
+    function turnOffLight() {
+      // 获取图片标签
+      var lightBulb = document.getElementById('lightBulb');
+
+      // 设置图片标签的 src 属性为灰色图片的路径
+      lightBulb.src = './images/close.jpg';
+    }
+  </script>
+</head>
+
+<body>
+  <div class="index">
+    <button onclick="turnOnLight()">开灯</button>
+    <img id="lightBulb" src="./images/close.jpg">
+    <button onclick="turnOffLight()">关灯</button>
+  </div>
+</body>
+
+</html>
+<style>
+  .index {
+    width: 500px;
+    height: auto;
+    margin: 50px auto 0 auto;
+
+  }
+</style>
